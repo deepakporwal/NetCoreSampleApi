@@ -19,10 +19,9 @@ namespace SampleCoreApi.Controllers
         }
         
         [HttpPost("GetName")]
-        public string GetName(string id)
+        public string GetName()
         {
-            int userid = Convert.ToInt32(id);
-            return "deepak porwal";
+            throw new NullReferenceException("Null reference exception");
         }
     }
 }
