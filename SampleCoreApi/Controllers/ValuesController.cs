@@ -11,11 +11,18 @@ namespace SampleCoreApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        [HttpGet]
+        [HttpGet("Test")]
         public clsResponse Test() 
         {
             var response = new clsResponse() { message = "", responsecode = 200 };
             return response;
+        }
+        
+        [HttpPost("GetName")]
+        public string GetName(string id)
+        {
+            int userid = Convert.ToInt32(id);
+            return "deepak porwal";
         }
     }
 }
